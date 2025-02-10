@@ -8,7 +8,7 @@ def nombre_premier(a):
         return False
     
     for i in range(1,a):
-        if a%i == 1:
+        if a%i == 0:
             return False
     return True
     
