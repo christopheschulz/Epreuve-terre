@@ -9,8 +9,8 @@ try:
             print(f"reste: {int(arguments[1]) % int(arguments[2])}")
             exit()
 except ValueError:
-      pass
+      print("erreur.")
+     
 
-print("erreur.")
         
 
