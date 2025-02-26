@@ -2,10 +2,10 @@
 
 import sys
 
-arguments = sys.argv
+args = sys.argv[1:]
 
-if len(arguments) == 2 and not arguments[1].isdigit():
-    print(len(arguments[1]))
+if len(args) == 1 and not args[0].isdigit():
+    print(len(args[0]))
 else:
     print("erreur.")
     
