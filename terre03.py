@@ -1,20 +1,31 @@
 # L’alphabet à partir de
 
-import string
 import sys
 
-argument = sys.argv
-alphabet = string.ascii_lowercase
+args = sys.argv[1:]
 
-if len(argument) > 2 or len(argument) == 1:
-    print("Veuillez vérifier le nombre d'argument passé! Il (ne) doit y en avoir (qu')un !")
-    sys.exit()
-if argument[1].lower() not in alphabet:
-    print("L'argument doit être une lettre de l'alphabet!")
-    sys.exit()
+alphabet = ""
+for i in range(97,123):
+    alphabet+= chr(i)
 
-indice_argument = alphabet.index(argument[1])
+def args_are_valid():
+    if len(args) > 1:
+        print("Veuillez vérifier le nombre d'argument passé! Il (ne) doit y en avoir (qu')un !")
+        return False
+    elif args[0].lower() not in alphabet:
+        print("L'argument doit être une lettre de l'alphabet!")
+        return False
+    return True
 
-for i in range(indice_argument, len(alphabet)):
-    print(alphabet[i],end="")
-print()
+
+def main():
+    if args_are_valid():
+        indice_argument = alphabet.index(args[0])
+
+        for i in range(indice_argument, len(alphabet)):
+            print(alphabet[i],end="")
+        print()
+
+
+if __name__ == "__main__" :
+    main()
