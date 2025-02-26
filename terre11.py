@@ -2,7 +2,7 @@
 
 import sys
 
-args = sys.argv
+args = sys.argv[1:]
 
 def transfrom_24_to_12(chaine):
     split_chaine = chaine.split(":")
@@ -23,7 +23,7 @@ def transfrom_24_to_12(chaine):
 
 
 
-if len(args) == 2 and ":" in args[1]:
-    print(transfrom_24_to_12(args[1]))
+if len(args) == 1 and ":" in args[0]:
+    print(transfrom_24_to_12(args[0]))
 else:
     print("Mmm ... il y a anguille sous roche")
