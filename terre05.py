@@ -1,3 +1,5 @@
+# Divisions
+
 import sys
 
 arguments = sys.argv

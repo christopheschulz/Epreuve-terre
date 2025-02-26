@@ -1,3 +1,5 @@
+# Pair ou impair
+
 import sys
 
 argument = sys.argv

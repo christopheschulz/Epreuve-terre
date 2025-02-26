@@ -1,3 +1,5 @@
+# Inverser une chaîne
+
 import sys
 
 arguments = sys.argv

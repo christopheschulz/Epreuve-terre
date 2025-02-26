@@ -1,3 +1,5 @@
+# Puissance d’un nombre
+
 import sys
 
 args = sys.argv

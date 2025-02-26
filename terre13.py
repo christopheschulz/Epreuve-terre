@@ -1,3 +1,5 @@
+# Trouver la Suisse (lol)
+
 import sys
 
 args = sys.argv

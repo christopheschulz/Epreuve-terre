@@ -1,3 +1,5 @@
+# Trié ou pas
+
 import sys
 import copy
 

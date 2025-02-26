@@ -1,4 +1,7 @@
+# Taille d’une chaîne
+
 import sys
+
 arguments = sys.argv
 
 if len(arguments) == 2 and not arguments[1].isdigit():

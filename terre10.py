@@ -1,3 +1,5 @@
+# Nombre premier
+
 import sys
 
 args = sys.argv

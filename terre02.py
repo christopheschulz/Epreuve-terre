@@ -1,3 +1,5 @@
+# Afficheur d’arguments
+
 import sys
 
 argument = sys.argv

@@ -1,3 +1,5 @@
+# L’alphabet à partir de
+
 import string
 import sys
 
