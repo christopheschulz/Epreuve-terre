@@ -2,7 +2,7 @@
 
 import sys
 
-args = sys.argv
+args = sys.argv[1:]
 
 def puissance(a,b):
     result = 1
@@ -11,7 +11,7 @@ def puissance(a,b):
         result *= int(a)
     return result
 
-if len(args) == 3 and args[1].isdigit() and args[2].isdigit():
-    print(puissance(args[1],args[2]))
+if len(args) == 2 and all(arg.isdigit() for arg in args):
+    print(puissance(args[0],args[1]))
 else:
     print("Mmm ... Quelquechose cloche !")
