@@ -2,10 +2,9 @@
 
 import sys
 
-argument = sys.argv
+arguments = sys.argv[1:]
 
-for i in range(len(argument)):
-    if i != 0:
-        print(argument[i])
+for i in range(len(arguments)):
+   print(arguments[i])
     
 
