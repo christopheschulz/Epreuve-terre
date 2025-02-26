@@ -2,7 +2,7 @@
 
 import sys
 
-arguments = sys.argv
+arguments = sys.argv[1:]
 
 def inverser(chaine):
     resultat = []
@@ -12,8 +12,11 @@ def inverser(chaine):
     
     return "".join(resultat)
 
-if len(arguments) == 2:
-    print(inverser(arguments[1]))
-   
-else:
-    print("Mmm ... Il y a comme un problème !")
+def main():
+    if len(arguments) == 1:
+        print(inverser(arguments[0]))
+    else:
+        print("Mmm ... Il y a comme un problème !")
+
+if __name__ == "__main__":
+    main()
