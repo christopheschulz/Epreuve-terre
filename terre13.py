@@ -2,7 +2,7 @@
 
 import sys
 
-args = sys.argv
+args = sys.argv[1:]
 
 def trouver_la_suisse(*args):
     resultat = 0
@@ -19,7 +19,7 @@ def trouver_la_suisse(*args):
 
 
 
-if len(args) == 4 and all(arg.isdigit() for arg in args[1:]):
-    print(trouver_la_suisse(args[1:]))
+if len(args) == 3 and all(arg.isdigit() for arg in args):
+    print(trouver_la_suisse(args))
 else:
     print("il semblerai bien que vous n'ayez pas 3 arguments ou qu'ils ne soient pas des entiers !")
