@@ -2,18 +2,26 @@
 
 import sys
 
-argument = sys.argv
+args = sys.argv[1:]
 
-if len(argument) >2 or len(argument) == 1  :
-    print("Tu ne me la mettras pas à l'envers")
-    sys.exit()
-try:
-    int_arg = int(argument[1])
-except ValueError:
-    print("Tu ne me la mettras pas à l'envers")
-    sys.exit()
+def args_are_valid():
+    if len(args) > 1  :
+        print("Tu ne me la mettras pas à l'envers")
+        return False
+    return True
 
-if abs(int(argument[1])) % 2 == 0:
-    print("pair")
-else:
-    print("impair")
+def main():
+    if args_are_valid():
+        try:
+            int_arg = int(args[0])
+            if abs(int_arg) % 2 == 0:
+                print("pair")
+            else:
+                print("impair")
+        except ValueError:
+            print("Tu ne me la mettras pas à l'envers")
+            sys.exit()
+
+
+if __name__ == "__main__":
+    main()
