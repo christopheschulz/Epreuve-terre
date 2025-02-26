@@ -2,4 +2,6 @@ import sys
 
 args = sys.argv
 
-print(args[0])
+files_name = args[0]
+
+print(files_name)
