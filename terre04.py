@@ -10,6 +10,7 @@ def args_are_valid():
         return False
     return True
 
+
 def main():
     if args_are_valid():
         try:

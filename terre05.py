@@ -2,16 +2,28 @@
 
 import sys
 
-arguments = sys.argv
-print(arguments)
+args = sys.argv[1:]
 
-try:
-    if len(arguments) == 3 and int(arguments[2]) != 0 and int(arguments[1]) // int(arguments[2]) != 0:
-            print(f"résultat : {int(arguments[1]) // int(arguments[2])}")
-            print(f"reste: {int(arguments[1]) % int(arguments[2])}")
-            exit()
-except ValueError:
-      print("erreur.")
+
+def args_are_valid():
+     if len(args) != 2:
+          return False
+     return True
+     
+def main(): 
+    if args_are_valid():
+        try:
+            a = int(args[0])
+            b =int(args[1])
+            if b != 0 and a // b != 0:
+                print(f"résultat : {a // b}")
+                print(f"reste: {a % b}")
+        except ValueError as e:
+            print("e")
+    else:
+         print("erreur.")
+if __name__ == "__main__":
+      main()
      
 
         
