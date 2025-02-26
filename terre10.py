@@ -2,7 +2,7 @@
 
 import sys
 
-args = sys.argv
+args = sys.argv[1:]
 
 def nombre_premier(a):
     a = int(a)
@@ -12,13 +12,14 @@ def nombre_premier(a):
     for i in range(1,a):
         if a%i == 0:
             return False
+        
     return True
     
   
-if len(args) == 2 and args[1].isdigit():
-    if nombre_premier(args[1]):
-        print(f"Oui, {args[1]} est un nombre premier")
+if len(args) == 1 and args[0].isdigit():
+    if nombre_premier(args[0]):
+        print(f"Oui, {args[0]} est un nombre premier")
     else:
-        print(f"Non, {args[1]} n'est pas un nombre premier")
+        print(f"Non, {args[0]} n'est pas un nombre premier")
 else:
     print("Mmm ... Quelquechose cloche !")
